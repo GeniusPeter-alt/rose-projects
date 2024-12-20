@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MULU ROSE- Portfolio</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            background-color: rgb(50,61,75,255);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .navigation {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .navigation button {
+            background-color: #15ff00ad;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Page 1 styling */
+        .page1-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .page1-content img {
+            width: 40%;
+            border-radius: 8px;
+        }
+
+        .page1-content .summary {
+            width: 55%;
+        }
+
+        /* Page 2 styling */
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background-color: blue;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .tabs button {
+            background: none;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-active {
+            display: block;
+        }
+
+        /* Page 3 styling */
+        .contact-form {
+            background-color: #00ff4059;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .contact-form button {
+            background-color: #a59797;
+            color: blue;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .page1-content {
+                flex-direction: column;
+            }
+
+            .page1-content img, .page1-content .summary {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navigation">
+            <button onclick="showPage('page1')">Home</button>
+            <button onclick="showPage('page2')">Education & Skills</button>
+            <button onclick="showPage('page3')">Contact</button>
+        </div>
+
+        <!-- Page 1 -->
+        <div id="page1" class="page active">
+            <div class="page1-content">
+                <div class="summary">
+                    <h2>Professional Summary</h2>
+                    <p>dedicated applied Statistics student at the cooperative university of kenya in karen with a passion for analyzing data to derive meaningful insights,
+                       I am proficient in statistical tools and work well under minimal supervision.seeking to apply theoritical knowledge to real world problems and contribute effectively to the field of statistics .I am also a web developer student at BCH online course and also a virtual assistant certified by ALX</p>
+                </div>
+            <img src="images/rose.jpg" alt="Profile">
+            </div>
+        </div>
+
+        <!-- Page 2 -->
+        <div id="page2" class="page">
+            <div class="tabs">
+                <button onclick="showTab('education')">Education</button>
+                <button onclick="showTab('skills')">Skills</button>
+                <button onclick="showTab('projects')">Projects</button>
+            </div>
+
+            <div id="education" class="tab-content tab-active">
+                <h2>Education</h2>
+                <ul>
+                    <li><strong>Bachelor of Science in Applied Statistics</strong>,Virtual assistant and a web developer</strong>, Cooperative University Main Branch, Karen, Nairobi</strong>,ALX
+                        <br>Relevant Coursework: Statistical Analysis,<br> Data Interpretation, <br>Mathematical Modeling,<br>presentation,<br>virtual assistance,<br>Portfolio.
+                    </li>
+                    <li><strong>Secondary Education:</strong> New Horizons Secondary School</li>
+                    <li><strong>Primary Education:</strong> ACK Ukia Primary School</li>
+                </ul>
+            </div>
+            <div id="skills" class="tab-content">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Statistical Analysis, Data Interpretation, Mathematical Modeling</li>
+                    <li>Proficient in Statistical Tools (R, Python,SQL, SAS)</li>
+                    <li>web development</li>
+                    <li>Leadership, Strong Communication (Peer Counselling)</li>
+                    <li>Self-motivated and Passionate </li>
+                    <li>calender,email,itinerary managment</li>
+                    <li>virtual assisant</li>
+
+                </ul>
+            </div>
+            <div id="projects" class="tab-content">
+                <h2>Projects</h2>
+                <p>Here are some of my projects, showcasing what i have worked on.</p>
+                <ul>
+                  <li>
+                      <a href="https://docs.google.com/presentation/d/1bBDZOzOjDl71m4ph7qvd1Or0IzqY1fjvN9LmO72ZB9Q/edit?usp=sharing" target="_blank">travel pack</a>
+                      <p>created a travel pack  for a trip to south Africa showing the followingntry/Exit Requirements
+                        Etiquette and Cultural Expectations
+                        Event Information
+                        Budget
+                        Travel Itinerary .</p>
+                  </li>
+                  <li>
+                      <a href="https://docs.google.com/spreadsheets/d/1IdKN4q3a8cvak8wP_Lfk0NqgE4XS-86SpjjZBGDhk1k/edit?usp=sharing" target="_blank">internet reseach</a>
+                      <p>did internet reseach on parks and cities in califonia showing the following;City name
+                        Geographical size in square miles (mi2)
+                        The number of parks in the city
+                        The population as of last year.</p>
+                      </li>
+                      <li>
+                        <a href="C:/Users/user/OneDrive/Desktop/rose%20web/Untitled-1.html" target="_blank">my Portfolio</a>
+                        <p>created my portfolio to make collective work of my skills,education,projects in one place</p>
+                      </li>
+            </div>
+        </div>
+
+        <!-- Page 3 -->
+        <div id="page3" class="page">
+            <div class="contact-form">
+                <h2>Contact Me</h2>
+                <form action="rose18kalewa@gmail.com" method="post" enctype="text/plain">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send Email</button>
+                </form>
+                <p>You can also reach me via SMS or call at <strong>0703580471</strong>.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+        }
+
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => {
+                tab.classList.remove('tab-active');
+            });
+            document.getElementById(tabId).classList.add('tab-active');
+        }
+    </script>
+</body>
+
+</html>
